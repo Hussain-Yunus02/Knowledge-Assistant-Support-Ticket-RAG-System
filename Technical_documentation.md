@@ -7,6 +7,8 @@
 
 This notebook implements a **Knowledge Assistant** that helps a support team handle customer tickets efficiently. It uses a **Retrieval-Augmented Generation (RAG)** pipeline with a **Large Language Model (LLM)**. The output is structured in **MCP-compliant JSON** format, containing an answer, references, and an action requirement.
 
+The project was deployed entirely on Google Colab using the T4 GPU setting.
+
 ---
 
 ## 2. Technologies Used
