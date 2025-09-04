@@ -1,0 +1,8 @@
+{
+  "answer": "The different abuse categories mentioned in the provided context are:\n\n* Phishing websites\n* Malware distribution\n* Spam and botnet control\n\nTickets related to these categories should be escalated to the Abuse Team. The escalation email for abuse-related tickets is mentioned in Section 3.2 of the Abuse Handling document: abuse@company.example.\n\nReferences:\n\n* Abuse Handling document (Section 3.1 and 3.2)\n* Domain Suspension Guidelines document (Section 1.1 and 1.2)",
+  "references": [
+    "Abuse_Handling.pdf (Page 1)",
+    "Domain_Suspension_Guidelines.pdf (Page 1)"
+  ],
+  "action_required": "None."
+}
