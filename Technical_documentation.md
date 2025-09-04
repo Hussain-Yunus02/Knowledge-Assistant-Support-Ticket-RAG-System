@@ -90,7 +90,42 @@ This notebook implements a **Knowledge Assistant** that helps a support team han
 
 ---
 
-## 4. Example End-to-End Flow
+## 4. Permissions/Login Credentials Needed
+
+To run this notebook successfully with different Large Language Models (LLMs), a few authentication steps and permissions are required:
+
+### Hugging Face Account
+
+* You must have a **Hugging Face account** ([https://huggingface.co](https://huggingface.co)).
+* This is needed to download and use models such as **Meta’s LLaMA 2** and **Mistral**.
+* Once registered, you can generate a personal **Access Token** under your account settings (`Settings > Access Tokens`).
+* This token must be set in your environment:
+
+  ```bash
+  export HUGGINGFACEHUB_API_TOKEN="your_token_here"
+  ```
+
+  or directly in the notebook:
+
+  ```python
+  import os
+  os.environ["HUGGINGFACEHUB_API_TOKEN"] = "your_token_here"
+  ```
+
+### Meta LLaMA 2 Permissions
+
+* To use **meta-llama/Llama-2-7b-chat-hf** (or other LLaMA 2 variants), you must **request access** from Meta via Hugging Face model card page.
+* Approval is typically **granted within 60 minutes**, though in some cases it may take longer.
+* Without this approval, attempts to load the model will result in a *“you don’t have permission”* error.
+
+### Alternative Model – Mistral
+
+* If LLaMA 2 access has not yet been approved, you can use **Mistral 7B Instruct** (`mistralai/Mistral-7B-Instruct-v0.2`) as a direct alternative.
+* Mistral is open-access and requires only a Hugging Face account/token (no extra permission from Meta).
+* The notebook is already compatible — you can switch models with a simple parameter change.
+
+---
+## 5. Example End-to-End Flow
 
 1. Input Ticket:
 
@@ -120,7 +155,7 @@ This notebook implements a **Knowledge Assistant** that helps a support team han
 
 ---
 
-## 5. Testing & Validation
+## 6. Testing & Validation
 
 ### Simple Checks Implemented
 
@@ -130,7 +165,7 @@ This notebook implements a **Knowledge Assistant** that helps a support team han
 
 ---
 
-## 6. Key Design Choices
+## 7. Key Design Choices
 
 * **RAG instead of plain LLM** → Ensures responses are grounded in company policies.
 * **MCP JSON schema** → Provides consistent, structured output for integration.
@@ -139,7 +174,7 @@ This notebook implements a **Knowledge Assistant** that helps a support team han
 
 ---
 
-## 7. Future Extensions
+## 8. Future Extensions
 
 * Improve retrieval with re-ranking (e.g., BM25 + FAISS hybrid).
 * Add more domain-specific escalation categories.
